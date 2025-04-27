@@ -36,7 +36,7 @@ nav a:hover {
 }
 
 header {
-    background: url('discovery.png') no-repeat center center/cover;
+    background: url('../img/discovery.png') no-repeat center center/cover;
     background-attachment: fixed;
     height: 100vh;
     display: flex;
@@ -46,7 +46,6 @@ header {
     text-align: center;
     padding: 20px;
     color: white;
-    background-attachment: fixed;
 }
 
 header h1 {
@@ -204,12 +203,23 @@ footer {
     margin-top: 50px;
 }
 
+#locations {
+    background: url('../img/your-location-image.png') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px);}
     100% { opacity: 1; transform: translateY(0);}
 }
 
 @media (max-width: 768px) {
+    header {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+    }
     header h1 {
         font-size: 2.2rem;
     }
@@ -222,7 +232,12 @@ footer {
         width: 100%;
         height: 200px;
     }
-
+    #locations {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+    }
     #locations h2 {
         font-size: 2rem;
     }
